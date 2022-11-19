@@ -20,69 +20,37 @@ export const students = [
 ]
 
 
-// const GetName = (arr) => {
-//     const name = []
-//     for (let i = 0; i < arr.length; i++) {
-//         name[i] = arr[i].name
-//     }
-//     return name
-//
-// }
-// const GetScore = (arr) => {
-//     const funScore = (st => st.scores)
-//     const score = []
-//     for (let i = 0; i < arr.length; i++) {
-//         score[i] = funScore(arr[i])
-//     }
-//     return score
-// }
-// const GetMar = (arr) => {
-// const fun = (m)=>({...m, married: true})
-//     const married = []
-//     for (let i = 0; i < arr.length; i++) {
-//         married[i] = fun(arr[i])
-//     }
-//     return married
-// }
-//
-//
-//
-// const getAge = (arr)=> {
-//     const fun = (st => st.age)
-//     let ageSt = []
-//     for (let i = 0; i < arr.length; i++) {
-//         ageSt[i] = fun(arr[i])
-//     }
-//
-//     return ageSt
-// }
+
 const func1 = (st) => st.name
-const ChangrName = (stName) => ({...stName, name: 'David'})
+const ChangeName = (stName) => ({...stName, name: 'David'})
+//
+//
+// const global = (arr, func)=>{
+//     let result = []
+//     for (let i = 0; i < arr.length; i++) {
+//         result[i] = func(arr[i])
+//     }
+//     return result
+// }
+//
+//
+// console.log(global(students, func1))
+// console.log(global(students, ChangeName))
+// console.log(students.map(st => st.age))
+// console.log(students.map(st => st.age))
+//------------------FUNCTION (map under cover) DONE AS METHOD ARRAY-------------
 
-
-const global = (arr, func)=>{
-    let result = []
-    for (let i = 0; i < arr.length; i++) {
-        result[i] = func(arr[i])
+function SelfMadeMap (func1){
+    const res = []
+    for (let i = 0; i < this.length; i++) {
+        res[i] = func1(this[i])
     }
-    return result
+    return res
 }
 
-
-const ChangeNameForSt = (arr, ChangrName) => {
-let result = []
-    for (let i = 0; i < arr.length ; i++) {
-       result[i] =  ChangrName(arr[i])
-    }
-
-
-    return result
-}
-
-console.log(global(students, func1))
-console.log(global(students, ChangrName))
-
-
+Array.prototype.SelfMadeMap = SelfMadeMap
+console.log(students.SelfMadeMap(func1))
+console.log(students.SelfMadeMap(ChangeName))
 
 // console.log(GetName(students))
 // console.log(GetScore(students))
