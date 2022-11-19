@@ -1,3 +1,5 @@
+import {students} from "../02/02";
+
 export const users = [
     {
         id: 1,
@@ -67,4 +69,5 @@ console.log(user3.name) //почему не выводит в консоль ?
 //
 export function Connect (){
     return <h1>Connect</h1>
+    let students = students
 }
