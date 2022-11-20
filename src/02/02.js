@@ -23,21 +23,21 @@ export const students = [
 
 const func1 = (st) => st.name
 const ChangeName = (stName) => ({...stName, name: 'David'})
-//
-//
-// const global = (arr, func)=>{
-//     let result = []
-//     for (let i = 0; i < arr.length; i++) {
-//         result[i] = func(arr[i])
-//     }
-//     return result
-// }
-//
-//
-// console.log(global(students, func1))
-// console.log(global(students, ChangeName))
-// console.log(students.map(st => st.age))
-// console.log(students.map(st => st.age))
+
+
+const global = (arr, func)=>{
+    let result = []
+    for (let i = 0; i < arr.length; i++) {
+        result[i] = func(arr[i])
+    }
+    return result
+}
+
+
+console.log(global(students, func1))
+console.log(global(students, ChangeName))
+console.log(students.map(st => st.age))
+console.log(students.map(st => st.age))
 //------------------FUNCTION (map under cover) DONE AS METHOD ARRAY-------------
 
 function SelfMadeMap (func1){
@@ -51,9 +51,19 @@ function SelfMadeMap (func1){
 Array.prototype.SelfMadeMap = SelfMadeMap
 console.log(students.SelfMadeMap(func1))
 console.log(students.SelfMadeMap(ChangeName))
+//------------------------------------Filter under cover-------------------------------------------
 
-// console.log(GetName(students))
-// console.log(GetScore(students))
-// console.log(GetMar(students))
-// console.log(getAge(students))
 
+const FilterUnderCover = (arr, fun) => {
+    const result = []
+
+    for (let i = 0; i < arr.length ; i++) {
+        if(fun(arr[i]) ===  true){
+            result.push(arr[i])
+        }
+    }
+
+    return result
+}
+
+console.log(FilterUnderCover(students, st=> st.age > 10))
