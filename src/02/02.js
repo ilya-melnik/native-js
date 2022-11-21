@@ -67,3 +67,16 @@ const FilterUnderCover = (arr, fun) => {
 }
 
 console.log(FilterUnderCover(students, st=> st.age > 10))
+//--------------------------------Push under cover ------------------------
+const addElToEndOfArray = (arr, el) => {
+
+    return arr[arr.length] = el
+    //exem2 ?? выводит не только длину масива*, но и масив
+
+    // let arr1 = arr
+    // let el1 = [el]
+    // let result = arr1.concat(el1)
+    // return result
+}
+console.log( addElToEndOfArray([1,2,3,4], 5))
+console.log( addElToEndOfArray([1,2,3,4], 58))
