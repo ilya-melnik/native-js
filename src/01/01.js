@@ -69,5 +69,5 @@ console.log(user3.name) //почему не выводит в консоль ?
 //
 export function Connect (){
     return <h1>Connect</h1>
-    let students = students
+
 }
