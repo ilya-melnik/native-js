@@ -104,11 +104,11 @@ const Sort
         for (let i = 0; i < nums.length - 1 - j; i++) {
             if (nums[i] > nums[i + 1]) {
                 isSorted = false;
-                    // let temp = nums[i]
-                    // nums[i] = nums[i + 1]
-                    // nums[i + 1] = temp
-                    // or
-                    [nums[i + 1], nums[i]] = [nums[i], nums[i + 1]]
+                // let temp = nums[i]
+                // nums[i] = nums[i + 1]
+                // nums[i + 1] = temp
+                // or
+                [nums[i + 1], nums[i]] = [nums[i], nums[i + 1]]
             }
             console.log(nums)
         }
@@ -118,9 +118,11 @@ const Sort
     }
 
 
+
+
     return (
         <div>
-            ffd
+
         </div>
     );
 };
